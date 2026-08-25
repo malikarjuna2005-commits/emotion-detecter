@@ -2,7 +2,7 @@
 Server for the Emotion Detector application.
 """
 
-from flask import Flask, request
+from flask import Flask, render_template, request
 
 from EmotionDetection.emotion_detection import emotion_detector
 
@@ -44,15 +44,10 @@ def sent_detector():
 def render_index_page():
     """Render the Emotion Detector home page."""
 
-    return (
-        "<h1>Emotion Detector</h1>"
-        "<form action='/emotionDetector'>"
-        "<input type='text' "
-        "name='textToAnalyze'>"
-        "<input type='submit' "
-        "value='Analyze'>"
-        "</form>"
-    )
+    return render_template("index.html")
+
+
+
 
 
 if __name__ == "__main__":

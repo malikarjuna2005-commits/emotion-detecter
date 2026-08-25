@@ -1,10 +1,11 @@
-# Emotion Detector
+# Final Project: Emotion Detector (oaqjp-final-project-emb-ai)
 
 An AI-based web application that detects emotions from text using the Watson NLP service.
 
 ## Repository
 
-Public repository: https://github.com/malikarjuna2005-commits/emotion-detecter
+Public repository: https://github.com/malikarjuna2005-commits/oaqjp-final-project-emb-ai
+
 
 ## Features
 
