@@ -1,3 +1,5 @@
+"""Emotion detection using the Watson NLP service."""
+
 import json
 import requests
 
@@ -23,11 +25,22 @@ def emotion_detector(text_to_analyse):
         }
     }
 
-    response = requests.post(
-        url,
-        json=input_json,
-        headers=headers
-    )
+    try:
+        response = requests.post(
+            url,
+            json=input_json,
+            headers=headers,
+            timeout=10
+        )
+    except requests.RequestException:
+        return {
+            "anger": None,
+            "disgust": None,
+            "fear": None,
+            "joy": None,
+            "sadness": None,
+            "dominant_emotion": None
+        }
 
     if response.status_code == 400:
         return {

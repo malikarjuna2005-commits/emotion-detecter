@@ -18,6 +18,9 @@ def sent_detector():
         "textToAnalyze"
     )
 
+    if not text_to_analyse or not text_to_analyse.strip():
+        return "Invalid text! Please try again!"
+
     response = emotion_detector(text_to_analyse)
 
     if response["dominant_emotion"] is None:
